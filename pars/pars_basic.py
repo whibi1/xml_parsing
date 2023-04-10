@@ -17,7 +17,7 @@ for a in root:
              liste.append(c.text)
 
 print(liste)
-with open("aa.txt","r+") as f:
+with open("aa.txt","w") as f:
     for line in liste:
         f.write(line+"\n")
 
