@@ -3,22 +3,21 @@ import xml.etree.ElementTree as ET
 tree= ET.parse("book.xml")
 root= tree.getroot()
 
-liste=[]
+list=[]
 for a in root:
     
-    liste.append(a.tag)
-    liste.append(a.text)
+    list.append(a.tag)
+    list.append(a.text)
     for b in a:
         
-        liste.append(b.tag)
-        liste.append(b.text)
+        list.append(b.tag)
+        list.append(b.text)
         for c in b:
-             liste.append(c.tag)
-             liste.append(c.text)
+             list.append(c.tag)
+             list.append(c.text)
 
-print(liste)
 with open("aa.txt","w") as f:
-    for line in liste:
+    for line in list:
         f.write(line+"\n")
 
 
